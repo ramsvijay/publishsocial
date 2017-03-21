@@ -1,61 +1,31 @@
 package com.controller;
-
-
-
-import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-
-
-
-
-
-
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.commons.CommonsMultipartFile;
-
-import com.bean.Images;
 import com.bean.Status1;
 import com.bean.ViewList;
 import com.bean.register;
-
-import static org.junit.Assert.assertEquals;
-
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
-
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
-
 import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 import java.util.ArrayList;
-
-import javax.imageio.stream.FileImageInputStream;
-import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.validation.constraints.AssertTrue;
-
-import com.restfb.BinaryAttachment;
 import com.restfb.DefaultFacebookClient;
 import com.restfb.FacebookClient;
 import com.restfb.Parameter;
 import com.restfb.types.FacebookType;
 import com.restfb.types.Post;
-
 import com.service.PostInf;
 import com.temboo.Library.Tumblr.Blog.CreateTextPost;
 import com.temboo.Library.Tumblr.Blog.CreateTextPost.CreateTextPostInputSet;
@@ -69,12 +39,8 @@ import com.temboo.Library.Tumblr.Blog.GetUserInformation.GetUserInformationResul
 import com.temboo.Library.Tumblr.Blog.InitializeOAuth;
 import com.temboo.Library.Tumblr.Blog.InitializeOAuth.InitializeOAuthInputSet;
 import com.temboo.Library.Tumblr.Blog.InitializeOAuth.InitializeOAuthResultSet;
-import com.temboo.Library.Tumblr.Blog.RetrievePublishedPosts;
-import com.temboo.Library.Tumblr.Blog.RetrievePublishedPosts.RetrievePublishedPostsInputSet;
-import com.temboo.Library.Tumblr.Blog.RetrievePublishedPosts.RetrievePublishedPostsResultSet;
 import com.temboo.core.TembooException;
 import com.temboo.core.TembooSession;
-
 import io.swagger.annotations.ApiOperation;
 import twitter4j.Status;
 import twitter4j.Twitter;
